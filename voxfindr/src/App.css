@@ -1,0 +1,16 @@
+body {
+  background-color: #621F13;
+}
+
+.VoxFindr {
+  background-color: white;
+  font-size: 70px;
+  position: absolute;
+  left: 20px;
+}
+
+.lyrics {
+  position: relative;
+  top: 200px;
+  left: 500px;
+}
