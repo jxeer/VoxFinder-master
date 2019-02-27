@@ -1,12 +1,18 @@
 body {
-  background-color: #621F13;
+  background-image: url("https://images.wallpaperscraft.com/image/headphones_vinyl_records_collection_114009_4912x3264.jpg");
+  position: center;
+  background-size: cover;
 }
 
+
 .VoxFindr {
-  background-color: white;
-  font-size: 70px;
+  background-color: brown;
+  color: white;
+  font-size: 40px;
   position: absolute;
   left: 20px;
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 .lyrics {
