@@ -5,9 +5,9 @@ const Form = (props) => {
   return (
     <div className="lyrics">
       <label>
-       <input type="text" name="lyrics" placeholder="♫ Type some lyrics ♫"/>
+       <input type="text" name="lyrics" onChange={props.handleChange} value={props.searchtext} placeholder="♫ Type some lyrics ♫"/>
        </label>
-       <input type="submit" value="submit"/>
+       <input type="submit" onClick={props.handleSubmit} value="submit"/>
       </div>
     );
  }
