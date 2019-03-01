@@ -41,7 +41,7 @@ handleChange = (e) => {
      return (
      <div className="App">
        <header className="VoxFindr">
-        VoxFindr
+        <Link to="/">VoxFindr</Link>
         </header>
         <Route path="/About" component={About} />
         <Route path="/results" render={()=> (

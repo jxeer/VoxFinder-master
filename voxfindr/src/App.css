@@ -7,8 +7,9 @@ body {
 
 .VoxFindr {
   background-color: brown;
-  color: white;
+  color: white; 
   font-size: 40px;
+  text-decoration-color: white;
   position: absolute;
   left: 20px;
   font-family: 'Press Start 2P', cursive;
@@ -44,7 +45,7 @@ body {
 
 a {
   text-decoration: none;
-  color:rgba(122, 208, 236, 0.89);
+  color: white;
 }
 
 h3 {
@@ -63,4 +64,9 @@ text {
 #logo {
   height: 100px;
   width: 100px;
+}
+
+#tracklist {
+  text-decoration: none;
+  color:rgba(122, 208, 236, 0.89);
 }
