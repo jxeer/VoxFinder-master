@@ -23,8 +23,41 @@ Musixmatch lyrics API
 
 https://developer.musixmatch.com/documentation
 
+### Code-Snippet
+
+class App extends Component {
+  constructor(){
+    super();
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.state = {
+     searchtext: '',
+     tracks:[]
+   }
+  }
+
+handleChange = (e) => {
+   this.setState({
+     searchtext: e.target.value
+    });
+  }
+  handleSubmit = async (e) => {
+   e.preventDefault();
+   const tracks = await fetchTracks(this.state.searchtext)
+   console.log(this.state)
+   this.setState({
+   tracks: tracks.message.body.track_list
+  })
+  this.props.history.push('/results')
+  }
+
 ### Technologies Used
 
 React app
 CSS
 Musixmatch API
+
+### Surge 
+
+http://statuesque-ocean.surge.sh/
