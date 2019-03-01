@@ -5,6 +5,8 @@ import { fetchTracks } from './services/MusixMatch';
 import { createCipher } from 'crypto';
 import Form from "./components/Form";
 import LyricsResults from "./components/LyricsResults";
+import About from "./components/About";
+import { withRouter } from "react-router";
 
 import { Route, Link } from "react-router-dom";
 
@@ -32,6 +34,7 @@ handleChange = (e) => {
    this.setState({
    tracks: tracks.message.body.track_list
   })
+  this.props.history.push('/results')
   }
 
    render(){
@@ -40,20 +43,14 @@ handleChange = (e) => {
        <header className="VoxFindr">
         VoxFindr
         </header>
-        <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} searchtext={this.state.searchtext} />
-        {this.state.tracks.map(tracks => (
-          <div key={tracks.id}>
-            {tracks.track.track_name}
-            <br />
-           <p>
-           <Route exact path="/" render={App} />
-            </p>
-          </div>
-        ))}
-        {this.state.tracks.map}
-         </div>
+        <Route path="/About" component={About} />
+        <Route path="/results" render={()=> (
+        <LyricsResults tracks= {this.state.tracks} />
+          )} />   
+        <Route exact path="/" render={()=> (
+        <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} searchtext={this.state.searchtext} /> )} />
+    </div>
  )
 }
 }
-
-export default App;
+export default withRouter(App);

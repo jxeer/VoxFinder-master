@@ -1,4 +1,8 @@
 import React from 'react'
 
 
-export default About
+export default (props) => {
+    return (
+        <h1>About Page</h1>
+    )
+}
