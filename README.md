@@ -25,12 +25,13 @@ https://developer.musixmatch.com/documentation
 
 ### Code-Snippet
 
+```
 class App extends Component {
   constructor(){
     super();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
+    
     this.state = {
      searchtext: '',
      tracks:[]
@@ -51,6 +52,7 @@ handleChange = (e) => {
   })
   this.props.history.push('/results')
   }
+```
 
 ### Technologies Used
 
